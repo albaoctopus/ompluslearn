@@ -3,8 +3,11 @@ const nextConfig = {
   images: {
     domains: [
       "utfs.io"
-    ]
-  }
-}
+    ],
+  },
+  basePath: '/learn',
+  assetPrefix: '/learn',
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+

@@ -20,14 +20,14 @@ export const SearchInput = () => {
 
   useEffect(() => {
     const url = qs.stringifyUrl({
-      url: pathname,
+      url: '/search',
       query: {
         categoryId: currentCategoryId,
         title: debouncedValue,
       }
     }, { skipEmptyString: true, skipNull: true });
 
-    router.push(url);
+    router.push(url, undefined, { shallow: true });
   }, [debouncedValue, currentCategoryId, router, pathname])
 
   return (
